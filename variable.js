@@ -3,7 +3,7 @@
 // Use this for valina Javascript
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
 
 // global한 변수들은 어플리케이션이 실행되고 끝날 때까지,
@@ -28,8 +28,11 @@ console.log(globalName);
 
 // 또한 var 는 block scope가 없다. (블록을 무시한다)
 
+// Note
+// Immutable data types : premitive types, frozen object (i.e. object.freeze())
+// Mutable data types : all object by default are mutable in JS
 
-// Constant (immutable data type)
+// Constant (immutable data type), r(read only)
 // 한 번 할당하면 값이 절대 바뀌지 않음.
 // 원래 변수는 값을 가르키는 포인터가 계속 바뀐다. (mutable data type)
 // 하지만 constant 는 값을 가르키는 포인터가 잠겨서 포인터를 바꿀 수 없는 것이다.
@@ -41,6 +44,11 @@ console.log(globalName);
 // 4. variable types
 // primitive, single itme (더이상 작은 단위로 나누어질 수 없는, 한가지의 아이템) : 
 // number, string, boolean, null, undefine, symbol
+// primitive type 과 object type 은 서로 다른 방식으로 메모리에 값을 저장함.
+// primitive type 의 경우 value 즉 값 자체가 메모리에 저장됨.
+// object type 은 너무 커서 메모리에 한 번에 올라갈 수 없다.
+// 그래서 먼저 레퍼런스 (실제 값이 들어가 있는 곳의 주소)를 가리키게 되고,
+// 레퍼런스는 실제 값들을 가리키는 곳이다.
 // object, box container
 // function, first-class function
 
